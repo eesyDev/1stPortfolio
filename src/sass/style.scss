@@ -1,0 +1,209 @@
+@import 'libs/bootstrap-reboot.min';
+@import 'libs/fonts';
+@import 'libs/icomoon';
+@import 'libs/slick';
+*{
+    font-family: 'ANTONIO';
+    padding: 0;
+    margin: 0;
+}
+*::before, 
+*::after {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+%line {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 0;
+    // background-color: #dbfc22;
+    background-color: rgb(10, 253, 253);
+    transition: .4s ease;
+}
+.container {
+    width: 1140px;
+    margin: 0 auto;
+}
+.main {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    background: rgb(253, 253, 250);
+    &-wrapper {
+        min-height: 70%;
+        position: relative;
+        overflow: hidden;
+    }
+}
+.title {
+    display: flex;
+    justify-content: center;
+    &-str {
+        font-size: 60px;
+        font-family: 'ANTONIO';
+        text-align: center;
+    }
+    &-reverse {
+        font-size: 60px;
+        font-family: 'ANTONIO';
+        text-align: center;
+        animation-name: reverse-title;
+        animation-duration: 1.5s;
+        animation-timing-function: ease;
+        animation-iteration-count: 1;
+        animation-direction: normal;
+        animation-delay: 1s;
+        animation-fill-mode: forwards;
+
+    }
+}
+.content {
+    padding: 50px 0;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.tabs {
+    margin: 0 0 50px 0;
+    &-items {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        justify-content: space-around;
+        li {
+            position: relative;
+            padding: 4px 15px;
+            margin: 0 5px;
+            // height: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            &:before {
+                @extend %line;
+                right: 0;
+                bottom: 33.333%;
+            }
+            &:after {
+                @extend %line;
+                left: 0;
+                bottom: 0;
+            }
+            &:hover {
+                a {
+                    text-shadow: 1px 1px 5px #000;
+                    &:before {
+                        width: 100%;
+                    }
+                }
+                &:after,
+                &:before {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    &-item {
+        font-size: 24px;
+        color: #000000;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        padding: 10px 5px;
+        transition: .4s ease;
+        z-index: 1;
+        flex: 0 1 25%;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        &:before {
+            @extend %line;
+            left: 0;
+            bottom: 66.666%;
+        }
+        &:hover {
+            text-decoration: none;
+            color: #000;
+        }
+    }
+    &-block {
+        height: 100%;
+        font-family: 'DIN Pro';
+        font-weight: 400;
+        padding: 20px;
+        font-size: 20px;
+        letter-spacing: normal;
+        line-height: 24px;
+        display: none;
+        position: relative;
+        &:nth-child(1) {
+            &:before {
+                content: '';
+                position: absolute;
+                top: 215px;
+                left: -15px;
+                width: 0;
+                height: 0;
+                color: rgb(10, 253, 253);
+                border-bottom: 2px solid;
+                border-left: 2px solid;
+                border-radius: 1px;
+                animation: border 1s ease 1 normal 0.5s forwards;
+            }
+            &:after {
+                content: '';
+                position: absolute;
+                width: 0;
+                height: 0;
+                right: -15px;
+                color: rgb(10, 253, 253);
+                top: 0;
+                border-top: 2px solid;
+                border-right: 2px solid;
+                border-radius: 1px;
+                animation: border 1s ease 1 normal 0.5s forwards;
+            }
+        }
+        // &:nth-child(2) {
+            
+        // }
+        // &:nth-child(3) {
+            
+        // }
+        &:target {
+            display: block;
+        }
+        &:before {
+            content: '';
+            height: 50px;
+            width: 33.333%;
+            position: absolute;
+            top: -50px;
+        }
+        
+    } 
+}
+@keyframes reverse-title {
+    0% {
+        transform: scale(1, 1);
+        color: #000;
+    }
+    100% {
+        transform: scale(-1, 1);
+        color:  rgb(10, 253, 253);
+    }
+}
+@keyframes border {
+    0% {
+        width: 0;
+        height: 0;
+    }
+    100% {
+        width: 70px;
+        height: 100px;
+    }
+}
+
+  
