@@ -25,3 +25,22 @@
     font-weight: 400;
     font-style: normal;
 }
+@font-face {
+	font-family: 'GOST type B';
+	src: url('../fonts/GOST-2304-81typeB.eot');
+	src: local('../fonts/GOST 2.304-81 type B'), local('GOST-2.304-81typeB'),
+		url('../fonts/GOST-2304-81typeB.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/GOST-2304-81typeB.woff') format('woff'),
+		url('../fonts/GOST-2304-81typeB.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+    font-family: 'Consolas';
+    src: local('../fonts/Consolas Regular'), local('Consolas-Regular'),
+        url('../fonts/Consolas.woff2') format('woff2'),
+        url('../fonts/Consolas.woff') format('woff'),
+        url('../fonts/Consolas.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
