@@ -73,13 +73,22 @@
     &-reverse {
         font-size: 60px;
         text-align: center;
-        animation-name: reverse-title;
-        animation-duration: 4s;
-        animation-timing-function: cubic-bezier(1, 0, 0, .5);
+        color: #dbfc22;
+        text-shadow: 
+        0 0 10px #dbfc22,
+        0 0 20px #dbfc22,
+        0 0 25px #dbfc22,
+        0 0 40px #fff,
+        0 0 60px #fff,
+        0 0 80px #fff;
+        animation: neon 10s ease-in 3s alternate;
+        // animation-name: reverse-title;
+        // animation-duration: 4s;
+        // animation-timing-function: cubic-bezier(1, 0, 0, .5);
         animation-iteration-count: infinite;
-        animation-direction: normal;
-        animation-delay: 3s;
-        animation-fill-mode: forwards;
+        // animation-direction: normal;
+        // animation-delay: 3s;
+        // animation-fill-mode: forwards;
 
     }
     &-name {
@@ -225,17 +234,58 @@
     } 
 }
 
-@keyframes reverse-title {
+// @keyframes reverse-title {
+//     0% {
+//         transform: scale(1, 1);
+//         color: #000;
+//     }
+//     50% {
+//         transform: scale(-1, 1);
+//         color:  #dbfc22;
+//     }
+//     100% {
+//         transform: scale(1, 1);
+//     }
+// }
+@keyframes neon {
     0% {
-        transform: scale(1, 1);
-        color: #000;
+        opacity: 1;
     }
-    50% {
-        transform: scale(-1, 1);
-        color:  #dbfc22;
+    3% {
+        opacity: 0;
+    }
+    4% {
+        opacity: 1;
+    }
+    6% {
+        opacity: 0;
+    }
+    7% {
+        opacity: 1;
+    }
+    23% {
+        opacity: 0;
+    }
+    47% {
+        opacity: 0;
+    }
+    48% {
+        opacity: 1;
+    }
+    57% {
+        opacity: 1;
+    }
+    78% {
+        opacity: 0;
+    }
+    86% {
+        opacity: 0;
+    }
+    87% {
+        opacity: 1;
     }
     100% {
-        transform: scale(1, 1);
+        opacity: 0;
     }
 }
 @keyframes border {
