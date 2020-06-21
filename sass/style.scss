@@ -20,7 +20,7 @@
 }
 .main {
     position: relative;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     padding: 20px;
     background: #3A3C4C;
@@ -95,10 +95,10 @@
     margin: 0 auto;
 }
 .tabs {
-    margin: 0 0 50px 0;
+    height: 100%;
     &-body {
         display: flex;
-        height: 55vh;
+        height: 100%;
     }
     &-items {
         display: flex;
