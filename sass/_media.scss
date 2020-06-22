@@ -183,12 +183,14 @@
             width: 280px;
             font-size: 12px;
             &:nth-child(3) {
+                margin-top: 60px;
                 a {
                     font-size: 45px;
                 }
             }
             &:nth-child(4) {
                 font-size: 19px;
+                padding: 60px 0 0;
                 div {
                     width: 320px;
                 }
@@ -241,7 +243,6 @@
                 }
             }
             &:nth-child(4) {
-                padding: 100px 0 0;
                 div {
                     width: 280px;
                 }
@@ -251,7 +252,7 @@
             }
         }
         &-icon {
-            font-size: 50px;
+            font-size: 55px;
         }
     }
 }
