@@ -16,6 +16,9 @@
     }
     .tabs-block {
         font-size: 18px;
+        &:nth-child(4) {
+            padding: 60px 45px 20px 20px;
+        }
     }
 }
 @media (max-width: 991px) {
@@ -23,7 +26,7 @@
         width: 720px;
     }
     .content {
-        padding: 40px 0 0;
+        padding: 35px 0 0;
     }
     .tabs {
         &-block {
@@ -34,13 +37,18 @@
                 margin-top: 70px;
             }
             &:nth-child(3) {
-                margin-top: 100px;
-                a {
-                    margin-top: 0;
-                    font-size: 60px;
+                margin-top: 40px;
+                .carousel {
+                    width: 650px;
+                    .slide {
+                        width: 100%;
+                    }
                 }
             }
             &:nth-child(4) {
+                padding: 25px 35px 20px 20px;
+            }
+            &:nth-child(5) {
                 font-size: 21px;
                 div {
                     width: 460px;
@@ -62,7 +70,7 @@
 }
 @media (max-width: 767px) {
     .container {
-        width: 540px;
+        width: 600px;
     }
     .title {
         &-str, &-reverse {
@@ -74,11 +82,18 @@
         &-block {
             padding: 30px 30px 0;
             &:nth-child(3) {
+                padding: 20px 0 0;
+                .carousel {
+                    width: 100%;
+                    .slide:after {
+                        text-indent: 540px;
+                    }
+                }
                 a {
                     font-size: 55px;
                 }
             }
-            &:nth-child(4) {
+            &:nth-child(5) {
                 font-size: 21px;
                 padding: 120px 0 0;
                 div {
@@ -107,7 +122,28 @@
             font-size: 55px;
         }
         &-item {
-            font-size: 19px;
+            font-size: 16px;
+        }
+        &-items {
+            li {
+                padding: 4px 10px;
+            }
+        }
+    }
+}
+@media (max-width: 650px) {
+    .container {
+        width: 510px;
+    }
+    .tabs-block:nth-child(3) {
+        .carousel {
+            height: 300px;
+            .slide {
+                height: 100%;
+                &:after {
+                    text-indent: 450px;
+                }
+            }
         }
     }
 }
@@ -121,8 +157,21 @@
     .tabs {
         &-block {
             width: 440px;
-            margin: 0 auto;
-            &:nth-child(4) {
+            margin: 50px auto;
+            &:nth-child(3) {
+                .carousel {
+                    height: 280px;
+                    .slide {
+                        &:after {
+                            text-indent: 380px;
+                        }
+                        &:before {
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+            &:nth-child(5) {
                 div {
                     width: 420px;
                 }
@@ -159,8 +208,14 @@
             }
             &:nth-child(3) {
                 margin-top: 70px;
+                .carousel {
+                    height: 250px;
+                    .slide:after {
+                        text-indent: 300px;
+                    }
+                }
             }
-            &:nth-child(4) {
+            &:nth-child(5) {
                 padding: 70px 0 0;
                 div {
                     width: 380px;
@@ -172,6 +227,11 @@
         }
         &-icon {
             font-size: 43px;
+        }
+        &-items {
+            li {
+                margin: 0 5px;
+            }
         }
     }
 }
@@ -187,11 +247,20 @@
             width: 280px;
             font-size: 12px;
             &:nth-child(3) {
-                a {
-                    font-size: 40px;
+                .carousel {
+                    height: 210px;
+                    .slide:after {
+                        text-indent: 265px;
+                    }
                 }
             }
             &:nth-child(4) {
+                a {
+                    font-size: 21px;
+                    line-height: 1.5;
+                }
+            }
+            &:nth-child(5) {
                 font-size: 19px;
                 div {
                     width: 320px;
@@ -209,7 +278,8 @@
             }
         }
         &-item {
-            font-size: 16px;
+            font-size: 15px;
+            padding: 0;
         }
         &-icon {
             font-size: 38px;
@@ -231,6 +301,7 @@
     }
     .tabs {
         &-items {
+            justify-content: space-evenly;
             li {
                 width: 50%;
             }
@@ -241,11 +312,17 @@
             }
             &:nth-child(3) {
                 margin-top: 30px;
+                .carousel {
+                    height: 200px;
+                    .slide:after {
+                        text-indent: 200px;
+                    }
+                }
                 a {
                     margin-top: 0;
                 }
             }
-            &:nth-child(4) {
+            &:nth-child(5) {
                 padding: 30px 0 0;
                 div {
                     width: 280px;
@@ -271,7 +348,7 @@
         &-block {
             width: 250px;
             font-size: 11px;
-            &:nth-child(4) {
+            &:nth-child(5) {
                 div {
                     width: 250px;
                 }
